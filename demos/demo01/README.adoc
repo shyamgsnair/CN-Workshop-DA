@@ -23,7 +23,7 @@ Your directory structure should now look like:
 +
 [source, bash]
 ---------------------------------------------------------------------
-CN-Workshop-TM:
+CN-Workshop-DA:
 ├── labs
 │   ├── lab01
 │   │   ├── cloud-native-spring
