@@ -17,7 +17,7 @@ Artifact:: +cloud-native-spring+
 
 . Click the _Generate Project_ button. Your browser will download a zip file.
 
-. Copy then unpack the downloaded zip file to *CN-Workshop-TM/labs/lab01/cloud-native-spring*
+. Copy then unpack the downloaded zip file to *CN-Workshop-DA/labs/lab01/cloud-native-spring*
 +
 Your directory structure should now look like:
 +
