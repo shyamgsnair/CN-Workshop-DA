@@ -12,7 +12,7 @@ This application will create a simple reading list by asking for books you have 
 +
 [source, java, numbered]
 ---------------------------------------------------------------------
-package io.pivotal.domain;
+package io.pivotal.cloudnativespring.domain;
 
 @Entity
 @Table(name="city")
@@ -78,7 +78,7 @@ Notice that we're using JPA annotations on the class and its fields. You'll need
 +
 [source,java]
 ---------------------------------------------------------------------
-package io.pivotal.repositories;
+package io.pivotal.cloudnativespring.repositories;
 
 @RepositoryRestResource(collectionResourceRel = "cities", path = "cities")
 public interface CityRepository extends PagingAndSortingRepository<City, Long> {
@@ -150,7 +150,7 @@ Next we'll import some data.
 
 == Importing Data
 
-. Add this https://raw.githubusercontent.com/Pivotal-Field-Engineering/CN-Workshop-TM/master/labs/lab02/import.sql[import.sql file] found in *CN-Workshop-TM/labs/lab02/* to +src/main/resources+. This is a rather large dataset containing all of the postal codes in the United States and its territories. This file will automatically be picked up by Hibernate and imported into the in-memory database.
+. Add this https://raw.githubusercontent.com/vrusso-pivotal/CN-Workshop-DA/master/demos/demo02/import.sql[import.sql file] found in *CN-Workshop-DA/demos/demo02/* to +src/main/resources+. This is a rather large dataset containing all of the postal codes in the United States and its territories. This file will automatically be picked up by Hibernate and imported into the in-memory database.
 
 . Restart the application.
 +
