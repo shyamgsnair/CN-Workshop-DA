@@ -15,14 +15,14 @@ In this lab we'll utilize Spring Boot and Spring Cloud to configure our applicat
 ---------------------------------------------------------------------
 +
 
-. Thanks to Spring Cloud instructing your application to register with Eureka is as simple as adding a single annotation to your app! Add an @EnableDiscoveryClient annotation to the class _io.pivotal.CloudNativeSpringApplication_ (/cloud-native-spring/src/main/java/io/pivotal/CloudNativeApplication.java):
+. Thanks to Spring Cloud instructing your application to register with Eureka is as simple as adding a single annotation to your app! Add an @EnableDiscoveryClient annotation to the class _io.pivotal.cloudnativespring.CloudNativeSpringApplication_ (/cloud-native-spring/src/main/java/io/pivotal/cloudnativespring/CloudNativeApplication.java):
 +
 [source, java, numbered]
 ---------------------------------------------------------------------
 @SpringBootApplication
 @RestController
 @EnableJpaRepositories
-@EnableDiscoveryClient
+@EnableDiscoveryClient  // <--- Add this
 @Import(RepositoryRestMvcAutoConfiguration.class)
 public class CloudNativeSpringApplication {
 ---------------------------------------------------------------------
@@ -31,7 +31,7 @@ Completed:
 +
 [source,java,numbered]
 ---------------------------------------------------------------------
-package io.pivotal;
+package io.pivotal.cloudnativespring;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -153,17 +153,17 @@ Artifact:: +cloud-native-spring-ui+
 
 . Click the _Generate Project_ button. Your browser will download a zip file.
 
-. Copy then unpack the downloaded zip file to *CN-Workshop-TM/labs/lab05/cloud-native-spring-ui*
+. Copy then unpack the downloaded zip file to *CN-Workshop-DA/demos/demo05/cloud-native-spring-ui*
 +
 Your directory structure should now look like:
 +
 [source, bash]
 ---------------------------------------------------------------------
-CN-Workshop-TM:
+CN-Workshop-DA:
 ├── labs
-│   ├── lab01
+│   ├── demo01
 │   │   ├── cloud-native-spring
-│   ├── lab05
+│   ├── demo05
 │   │   ├── cloud-native-spring-ui
 ---------------------------------------------------------------------
 
@@ -240,9 +240,9 @@ Completed:
 +
 [source,java,numbered]
 ---------------------------------------------------------------------
-package io.pivotal;
+package io.pivotal.cloudnativespringui;
 
-import io.pivotal.domain.City;
+import io.pivotal.cloudnativespring.domain.City;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -275,7 +275,7 @@ public class CloudNativeSpringUiApplication {
 +
 [source,java]
 ---------------------------------------------------------------------
-package io.pivotal;
+package io.pivotal.cloudnativespringui;
 
 import com.vaadin.annotations.Theme;
 
