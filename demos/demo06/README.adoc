@@ -14,14 +14,14 @@ In this lab we'll utilize Spring Boot and Spring Cloud to make our UI Applicatio
 </dependency>
 ---------------------------------------------------------------------
 
-. The first thing we need to add to our application is an @EnableCircuitBreaker annotation to the Spring Boot application.  Add this annotation below the other ones on the CloudNativeSpringUIApplication declaration in the class _io.pivotal.CloudNativeSpringUIApplication_ (/cloud-native-spring-ui/src/main/java/io/pivotal/CloudNativeSpringUIApplication.java):
+. The first thing we need to add to our application is an @EnableCircuitBreaker annotation to the Spring Boot application.  Add this annotation below the other ones on the CloudNativeSpringUIApplication declaration in the class _io.pivotal.cloudnativespringui.CloudNativeSpringUIApplication_ (/cloud-native-spring-ui/src/main/java/io/pivotal/cloudnativespringui/CloudNativeSpringUIApplication.java):
 +
 [source, java, numbered]
 ---------------------------------------------------------------------
 @SpringBootApplication
 @EnableFeignClients
 @EnableDiscoveryClient
-@EnableCircuitBreaker
+@EnableCircuitBreaker  // <--- Add this
 public class CloudNativeSpringUiApplication {
 ---------------------------------------------------------------------
 
@@ -51,9 +51,9 @@ public interface CityClient {
 +
 [source, java, numbered]
 ---------------------------------------------------------------------
-package io.pivotal;
+package io.pivotal.cloudnativespringui;
 
-import io.pivotal.domain.City;
+import io.pivotal.cloudnativespring.domain.City;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -146,7 +146,7 @@ $ cf start cloud-native-spring
 
 . Refresh the UI app and you should once again see a table listing the first page of cities.
 +
-image::../lab05/images/ui.jpg[]
+image::../demo05/images/ui.jpg[]
 
 . Refresh your UI application a few times to force some traffic though the circuit breaker call path.  After doing this you should now see the dashboard populated with metrics about the health of your Hystrix circuit breaker:
 +
