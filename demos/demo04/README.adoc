@@ -55,7 +55,7 @@ Completed:
 +
 [source,java,numbered]
 ---------------------------------------------------------------------
-package io.pivotal;
+package io.pivotal.cloudnativespring;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
