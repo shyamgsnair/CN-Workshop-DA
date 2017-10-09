@@ -24,8 +24,8 @@ Your directory structure should now look like:
 [source, bash]
 ---------------------------------------------------------------------
 CN-Workshop-DA:
-├── labs
-│   ├── lab01
+├── demos
+│   ├── demo01
 │   │   ├── cloud-native-spring
 ---------------------------------------------------------------------
 
@@ -37,11 +37,11 @@ Select File > Import… Then select Maven > Existing Maven Projects. On the Impo
 
 == Add an Endpoint
 
-. Add an @RestController annotation to the class _io.pivotal.CloudNativeSpringApplication_ (/cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java).
+. Add an @RestController annotation to the class _io.pivotal.cloudnativespring.CloudNativeSpringApplication_ (/cloud-native-spring/src/main/java/io/pivotal/cloudnativespring/CloudNativeSpringApplication.java).
 +
 [source, java, numbered]
 ---------------------------------------------------------------------
-package io.pivotal;
+package io.pivotal.cloudnativespring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -57,7 +57,7 @@ public class CloudNativeSpringApplication {
 }
 ---------------------------------------------------------------------
 
-. Add the following request handler to the class _io.pivotal.CloudNativeSpringApplication (/cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java).
+. Add the following request handler to the class _io.pivotal.cloudnativespring.CloudNativeSpringApplication (/cloud-native-spring/src/main/java/io/pivotal/cloudnativespring/CloudNativeSpringApplication.java).
 +
 [source,java]
 ---------------------------------------------------------------------
@@ -71,7 +71,7 @@ Completed:
 +
 [source,java]
 ---------------------------------------------------------------------
-package io.pivotal;
+package io.pivotal.cloudnativespring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -95,9 +95,9 @@ public class CloudNativeSpringApplication {
 
 == Run the _cloud-native-spring_ Application
 
-. In a terminal, change working directory to *CN-Workshop-TM/labs/lab01/cloud-native-spring*
+. In a terminal, change working directory to *CN-Workshop-DA/demos/demo01/cloud-native-spring*
 +
-$ cd /CN-Workshop-TM/labs/lab01/cloud-native-spring
+$ cd /CN-Workshop-DA/demos/demo01/cloud-native-spring
 
 . Run the application
 +
