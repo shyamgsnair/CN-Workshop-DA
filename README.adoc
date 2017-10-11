@@ -7,7 +7,7 @@ This one day classroom style session will provide developers with an introductio
 
 9:00 AM - 9:30 AM::
  * Welcome and Agenda
- * Pivotal Cloud Foundry Recap
+ * Pivotal Cloud Foundry Recap: link:presentations/Session_0-Pivotal%20CF%20Intro%20%26%20Fundamentals.pptx[_PCF Intro and Fundamentals_]
 9:30 AM - 10:30 AM::
  * Section 1: link:presentations/Session_1_Alt_Getting_Started_With_Microservices.pptx[_Cloud Native Design with Microservices_]
 10:30 AM - 10:45 AM:: Break
