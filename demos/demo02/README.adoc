@@ -117,11 +117,11 @@ $ mvn clean spring-boot:run
 [source,bash]
 ---------------------------------------------------------------------
 $ curl -i http://localhost:8080/cities
-HTTP/1.1 200 OK
-Server: Apache-Coyote/1.1
+HTTP/1.1 200 
+X-Application-Context: application
 Content-Type: application/hal+json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Thu, 28 Apr 2016 14:44:06 GMT
+Date: Fri, 20 Oct 2017 15:58:26 GMT
 
 {
   "_embedded" : {
@@ -129,7 +129,8 @@ Date: Thu, 28 Apr 2016 14:44:06 GMT
   },
   "_links" : {
     "self" : {
-      "href" : "http://localhost:8080/cities"
+      "href" : "http://localhost:8080/cities{?page,size,sort}",
+      "templated" : true
     },
     "profile" : {
       "href" : "http://localhost:8080/profile/cities"
@@ -141,7 +142,6 @@ Date: Thu, 28 Apr 2016 14:44:06 GMT
     "totalPages" : 0,
     "number" : 0
   }
-}
 ---------------------------------------------------------------------
 
 So what have you done? Created four small classes and one build file, resulting in a fully-functional REST microservice. The application's +DataSource+ is created automatically by Spring Boot using the in-memory database because no other +DataSource+ was detected in the project.
