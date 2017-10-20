@@ -271,7 +271,7 @@ public class CloudNativeSpringUiApplication {
 
 ---------------------------------------------------------------------
 
-. Next we'll create a Vaadin UI for rendering our data.  The point of this workshop isn't to go into detail on creating UIs; for now suffice to say that Vaadin is a great tool for quickly creating User Interfaces.  Our UI will consume our Feign client we just created.  Create the class _io.pivotal.AppUI_ (/cloud-native-spring-ui/src/main/java/io/pivotal/AppUI.java) and into it paste the following code:
+. Next we'll create a Vaadin UI for rendering our data.  The point of this workshop isn't to go into detail on creating UIs; for now suffice to say that Vaadin is a great tool for quickly creating User Interfaces.  Our UI will consume our Feign client we just created.  Create the class _io.pivotal.cloudnativespringui.AppUI_ (/cloud-native-spring-ui/src/main/java/io/pivotal/cloudnativespringui/AppUI.java) and into it paste the following code:
 +
 [source,java]
 ---------------------------------------------------------------------
@@ -283,7 +283,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.UI;
-import io.pivotal.domain.City;
+import io.pivotal.cloudnativespring.domain.City;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
