@@ -164,23 +164,16 @@ $ mvn clean spring-boot:run
 [source,bash]
 ---------------------------------------------------------------------
 $ curl -i localhost:8080/cities
+ 
 HTTP/1.1 200 OK
-Server: Apache-Coyote/1.1
-X-Application-Context: application
-Content-Type: application/hal+json
-Transfer-Encoding: chunked
-Date: Tue, 27 May 2014 19:59:58 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Date: Fri, 20 Oct 2017 16:21:57 GMT
+X-Application-Context: cloud-native-spring:cloud:0
+X-Vcap-Request-Id: eb6dfc39-cb37-4f66-4fdb-4c55aaa5f7fd
+Content-Length: 9244
+Connection: keep-alive
 
 {
-  "_links" : {
-    "next" : {
-      "href" : "http://localhost:8080/cities?page=1&size=20"
-    },
-    "self" : {
-      "href" : "http://localhost:8080/cities{?page,size,sort}",
-      "templated" : true
-    }
-  },
   "_embedded" : {
     "cities" : [ {
       "name" : "HOLTSVILLE",
@@ -191,14 +184,16 @@ Date: Tue, 27 May 2014 19:59:58 GMT
       "longitude" : "-072.637078",
       "_links" : {
         "self" : {
-          "href" : "http://localhost:8080/cities/1"
+          "href" : "http://cloud-native-spring-vince.cfapps.io/cities/1"
+        },
+        "city" : {
+          "href" : "http://cloud-native-spring-vince.cfapps.io/cities/1"
         }
       }
-    },
-
-    // ...
-
+    }
     {
+    ...
+    }, {
       "name" : "CASTANER",
       "county" : "LARES",
       "stateCode" : "PR",
@@ -207,10 +202,34 @@ Date: Tue, 27 May 2014 19:59:58 GMT
       "longitude" : "-066.864993",
       "_links" : {
         "self" : {
-          "href" : "http://localhost:8080/cities/20"
+          "href" : "http://cloud-native-spring-vince.cfapps.io/cities/20"
+        },
+        "city" : {
+          "href" : "http://cloud-native-spring-vince.cfapps.io/cities/20"
         }
       }
     } ]
+  },
+  "_links" : {
+    "first" : {
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities?page=0&size=20"
+    },
+    "self" : {
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities{?page,size,sort}",
+      "templated" : true
+    },
+    "next" : {
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities?page=1&size=20"
+    },
+    "last" : {
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities?page=2137&size=20"
+    },
+    "profile" : {
+      "href" : "http://cloud-native-spring-vince.cfapps.io/profile/cities"
+    },
+    "search" : {
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities/search"
+    }
   },
   "page" : {
     "size" : 20,
