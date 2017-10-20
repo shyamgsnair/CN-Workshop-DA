@@ -17,7 +17,7 @@ Artifact:: +cloud-native-spring+
 
 . Click the _Generate Project_ button. Your browser will download a zip file.
 
-. Copy then unpack the downloaded zip file to *CN-Workshop-DA/labs/lab01/cloud-native-spring*
+. Copy then unpack the downloaded zip file to *CN-Workshop-DA/demos/demo01/cloud-native-spring*
 +
 Your directory structure should now look like:
 +
@@ -33,7 +33,7 @@ CN-Workshop-DA:
 +
 *_STS Import Help:_*
 +
-Select File > Import… Then select Maven > Existing Maven Projects. On the Import Maven Projects page, browse to the /cloud-native-spring directory (e.g. CN-Workshop-TM/labs/lab01/cloud-native-spring)
+Select File > Import… Then select Maven > Existing Maven Projects. On the Import Maven Projects page, browse to the /cloud-native-spring directory (e.g. CN-Workshop-DA/demos/demo01/cloud-native-spring)
 
 == Add an Endpoint
 
