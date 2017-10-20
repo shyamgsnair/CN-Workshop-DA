@@ -226,9 +226,6 @@ Connection: keep-alive
     },
     "profile" : {
       "href" : "http://cloud-native-spring-vince.cfapps.io/profile/cities"
-    },
-    "search" : {
-      "href" : "http://cloud-native-spring-vince.cfapps.io/cities/search"
     }
   },
   "page" : {
@@ -298,7 +295,7 @@ Date: Tue, 27 May 2014 20:33:52 GMT
       "templated" : true
     },
     "search" : {
-      "href" : "http://localhost:8080/cities/search"
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities/search"
     }
 },
 // (Remainder omitted...)
@@ -312,29 +309,33 @@ http://localhost:8080/cities/search
 ---------------------------------------------------------------------
 $ curl -i "localhost:8080/cities/search"
 HTTP/1.1 200 OK
-Server: Apache-Coyote/1.1
-X-Application-Context: application
-Content-Type: application/hal+json
-Transfer-Encoding: chunked
-Date: Tue, 27 May 2014 20:38:32 GMT
+Content-Type: application/hal+json;charset=UTF-8
+Date: Fri, 20 Oct 2017 16:26:31 GMT
+X-Application-Context: cloud-native-spring:cloud:0
+X-Vcap-Request-Id: d5966469-e356-4126-76aa-caa2a242c98b
+Content-Length: 731
+Connection: keep-alive
 
 {
   "_links" : {
+    "nameContains" : {
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities/search/nameContains{?q,page,size,sort}",
+      "templated" : true
+    },
     "postalCode" : {
-      "href" : "http://localhost:8080/cities/search/postalCode{?q,page,size,sort}",
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities/search/postalCode{?q,page,size,sort}",
       "templated" : true
     },
     "state" : {
-      "href" : "http://localhost:8080/cities/search/state{?q,page,size,sort}",
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities/search/state{?q,page,size,sort}",
       "templated" : true
     },
     "name" : {
-      "href" : "http://localhost:8080/cities/search/name{?q,page,size,sort}",
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities/search/name{?q,page,size,sort}",
       "templated" : true
     },
-    "nameContains" : {
-      "href" : "http://localhost:8080/cities/search/nameContains{?q,page,size,sort}",
-      "templated" : true
+    "self" : {
+      "href" : "http://cloud-native-spring-vince.cfapps.io/cities/search"
     }
   }
 }
