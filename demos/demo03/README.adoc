@@ -298,7 +298,7 @@ $ mvn clean spring-boot:run
 +
 [source,java]
 ---------------------------------------------------------------------
-package io.pivotal;
+package io.pivotal.cloudnativespring;
 
 import java.util.Random;
 
