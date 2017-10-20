@@ -341,7 +341,7 @@ $ mvn clean spring-boot:run
   "flapping": {
       "status": "UP",
       "flapper": "ok",
-      "random": 42
+      "random": 70
   },
   "diskSpace": {
       "status": "UP",
